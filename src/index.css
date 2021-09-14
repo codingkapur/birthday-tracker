@@ -88,5 +88,7 @@ body {
   padding-left: 0.5rem;
 }
 .birthday-container__right {
-  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
 }

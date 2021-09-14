@@ -1,11 +1,11 @@
 import Birthday from "./Birthday";
 
-function ComingUp({ birthdayList }) {
+function ComingUp({ birthdayList, onDelete }) {
   return (
     <div className="birthdays-container">
-        {birthdayList.map((birthday)=>{
-            return <Birthday key={birthday.id} bday={birthday}/> 
-        })}
+        {birthdayList.map((birthday, index)=> (
+            <Birthday key={index} bday={birthday} onDelete={onDelete}/> 
+        ))}
     </div>
   );
 }
