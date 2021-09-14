@@ -9,7 +9,7 @@ function ReminderForm() {
                 <label>Date of Birth:</label>
                 <input type="text" placeholder="Enter Date of Birth"></input> 
             </div>
-                <input type="submit" value="Save Task" className="btn btn-save-task"></input> 
+                <input type="submit" value="Add Birthday" className="btn btn-add-birthday"></input> 
         </form>
     )
 }

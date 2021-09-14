@@ -5,6 +5,7 @@ import {useState} from 'react'
 
 
 function App() {
+  const [showForm, setShowForm] = useState(false)
   const [birthdayList, updateBirthdayList] = useState([
     {
       id: 1,
@@ -17,10 +18,12 @@ function App() {
       dob: '10th April 1980',
     }
   ])
+
+  const onClick = () => setShowForm(()=> !showForm)
   return (
     <div className="container">
-      <AddReminder />
-      <ReminderForm />
+      <AddReminder onClick={onClick} showForm={showForm}/>
+      {showForm? <ReminderForm /> : ''}
       <ComingUp birthdayList={birthdayList}/>
     </div>
   );

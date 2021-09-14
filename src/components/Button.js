@@ -1,6 +1,6 @@
-function Button() {
+function Button({ onClick, text}) {
     return (
-        <button className="btn btn-add-task">Add task</button>
+        <button className="btn btn-add-task" onClick={onClick}>{text}</button>
     )
 }
 
