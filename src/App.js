@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import AddReminder from './components/AddReminder'
+import ComingUp from './components/ComingUp'
+import ReminderForm from './components/ReminderForm'
+import {useState} from 'react'
+
 
 function App() {
+  const [birthdayList, updateBirthdayList] = useState([
+    {
+      id: 1,
+      name: 'Raghav Kapur',
+      dob: '26th March 1993',
+    },
+    {
+      id: 2,
+      name: 'Michael Jackson',
+      dob: '10th April 1980',
+    }
+  ])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <AddReminder />
+      <ReminderForm />
+      <ComingUp birthdayList={birthdayList}/>
     </div>
   );
 }
